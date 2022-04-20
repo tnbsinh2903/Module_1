@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Control car</title>
+    <style>
+        * {
+            padding: 5;
+            margin: 5;
+        }
+
+        img {
+            width: 100px;
+            height: 50px;
+            display: block;
+            max-width: 230px;
+            max-height: 95px;
+            width: auto;
+            height: auto;
+        }
+
+        body {
+            overflow-wrap: normal;
+        }
+    </style>
+</head>
+
+<body>
+    <img id="car" src="image/right.jpg" style="position: relative;
+                top: 0px;
+                left: 0px;
+            ">
+    <!-- <img id="car" src="images/right.jpg">  -->
+
+    <button style="position: fixed;
+                right: 20px;
+                bottom: 20px;" onclick="moveToRight()">Move To Right</button>
+    <!-- <button style="position: fixed;
+                right: 20px;
+                bottom: 20px;">Move To Right</button> -->
+    <button style="position: fixed;
+                right: 120px;
+                bottom: 20px;" onclick="moveToLeft()">Move To Left</button>
+    <button style="position: fixed; right: 210px; bottom:20px" onclick="moveToTop()">Move To Top</button>
+    <button style="position: fixed; right: 300px; bottom:20px" onclick="moveToDown()">Move To Down</button>
+    <script>
+        // Bảng mã ASSCI
+        const step = 10;
+        const arrowRight = 39;
+        const arrowLeft = 37;
+        const arrowTop = 38;
+        const arrowDown = 40;
+        const keyD = 68;
+        const keyA = 65;
+        const keyW = 87;
+        const keyS = 83;
+
+        // document.querySelector('button').addEventListener("click", moveToRight)
+
+        window.addEventListener("keydown", controlCar)
+
+        // function init(){
+        //     let car = document.getElementById('car');
+        //     car.style.position = 'relative';
+        //     car.style.left = 0;
+        //     car.style.top = 0;
+        //}
+        function moveToRight() {
+            let car = document.getElementById('car');
+            car.style.left = parseInt(car.style.left) + step + "px";
+            car.src = "image/right.jpg"
+        }
+        function moveToLeft() {
+            let car = document.getElementById('car');
+            car.style.left = parseInt(car.style.left) - step + "px";
+            car.src = "image/left.jpg"
+        }
+        function moveToTop() {
+            let car = document.getElementById('car');
+            car.style.top = parseInt(car.style.top) - step + "px"
+            car.src = "image/top.jpg"
+        }
+        function moveToDown() {
+            let car = document.getElementById('car');
+            car.style.top = parseInt(car.style.top) + step + "px"
+            car.src = "image/down.jpg"
+            console.log(car.style.top)
+        }
+        function controlCar(e) {
+            // console.dir(e)
+            // alert(e.keyCode)
+            switch (e.keyCode) {
+                case arrowRight:
+                case keyD:
+                    {
+                        // moveToRight();
+                        let car = document.getElementById('car');
+                        car.style.left = parseInt(car.style.left) + step + "px";
+                        car.src = "image/right.jpg"
+                        break;
+                    }
+                case arrowLeft:
+                case keyA:
+                    {
+                        // moveToLeft();
+                        let car = document.getElementById('car');
+                        car.style.left = parseInt(car.style.left) - step + "px";
+                        car.src = "image/left.jpg"
+                        break;
+                    }
+                case arrowTop:
+                case keyW:
+                    {
+                        let car = document.getElementById("car");
+                        car.style.top = parseInt(car.style.top) - step + 'px';
+                        car.src = "image/top.jpg"
+                        break;
+                    }
+                case arrowDown:
+                case keyS:
+                    {
+                        let car = document.getElementById("car");
+                        car.style.top = parseInt(car.style.top) + step + 'px';
+                        car.src = "image/down.jpg"
+                        break;
+                    }
+            }
+        }
+        // init();
+        // window.onload = init;
+    </script>
+</body>
+
+</html>

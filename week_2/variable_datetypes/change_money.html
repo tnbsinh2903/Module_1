@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<form>
+    <label for="amount">Amount</label>
+    <input type="text" name="amount" id="money" value="">
+    <label for="from">Fom Currency</label>
+    <select name="from" id="idfrom">
+        <option value="vnd">VNĐ</option>
+        <option value="usd">USA</option>
+    </select>
+    <label for="to">To</label>
+    <select name="to" id="idto">
+        <option value="usd">USD</option>
+        <option value="vnd">VNĐ</option>
+    </select>
+    <button type="button" onclick="changmoney()" >Convert</button>
+    <script>
+        function changmoney(){
+            let mount = document.getElementById("money").value;
+            let from = document.getElementById("idfrom").value;
+            let to = document.getElementById("idto").value;
+            if(from=='usd' && to=='vnd'){
+                 mount = mount*23000;
+                   alert("đô la sang việt nam là: " + mount);
+        }
+        if(from=='vnd'&& to=='usd'){
+            mount=mount/23000;
+            alert(`tiền việt qua đô la là: ${mount}`)
+        }
+        if(from=='usd' && to=='usd'){
+            amount = amount;
+    
+            alert("ket qua la: " + amount);
+        }
+    }
+            
+    
+          
+    </script>
+</form>
+</body>
+</html>

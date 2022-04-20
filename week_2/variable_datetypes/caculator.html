@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Caculator</h1>
+     <form>
+         <input type="text" name="text1" id="idtext1" value="">
+         <input type="text" name="text2" id="idtext2" value=""> 
+         <button type="button" onclick="Plus()" >Cộng(+)</button>
+         <button type="button" onclick="Subtraction()" >Trừ(-)</button>      
+         <button type="button" onclick="Multiplication()" >Nhân(*)</button>      
+         <button type="button" onclick="Division()" >Chia(/)</button>      
+     </form>  
+     <script>
+         function Plus(){
+             let text1 = document.getElementById("idtext1").value;
+             let text2 = document.getElementById("idtext2").value;
+            let plus = parseInt(text1) + parseInt(text2);
+            alert(`tổng bằng: ${plus}`)
+         }
+         function Subtraction(){
+         let text1 = document.getElementById("idtext1").value;
+             let text2 = document.getElementById("idtext2").value;
+            let subtraction = parseInt(text1) - parseInt(text2);
+            alert(`hiệu bằng: ${subtraction}`)
+         }
+         function Multiplication(){
+            let text1 = document.getElementById("idtext1").value;
+             let text2 = document.getElementById("idtext2").value;
+            let multiplication  = parseInt(text1) * parseInt(text2);
+            alert(`tích bằng: ${multiplication}`)
+         }
+         function Division(){
+            let text1 = document.getElementById("idtext1").value;
+             let text2 = document.getElementById("idtext2").value;
+            let plus = parseInt(text1) / parseInt(text2);
+            alert(`thương bằng: ${plus}`)
+         }
+     </script> 
+</body>
+</html>

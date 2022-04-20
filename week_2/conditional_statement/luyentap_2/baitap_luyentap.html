@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button onclick="bai1()">bài 1</button>
+    <button onclick="bai2()">bài 2</button>
+    <button onclick="bai3()">bài 3</button>
+    <button onclick="bai4()">bài 4</button>
+    <button onclick="bai5()">bài 5</button>
+    <button onclick="bai6()">bài 6</button>
+    <button onclick="bai7()">bài 7</button>
+    <button onclick="bai8()">bài 8</button>
+    <button onclick="bai9()">bài 9</button>
+    <button onclick="bai10()">bài 10</button>
+    <button onclick="bai11()">bài 11</button>
+    <button onclick="bai12()">bài 12</button>
+    <script>
+        function bai1() {
+            let celsius = parseInt(prompt("nhập độ c"));
+            let fahrenheit = (9 / 5 * celsius) + 32;
+            alert(`độ F là: ${fahrenheit}`)
+        }
+
+        function bai2() {
+            let meter = parseInt(prompt("nhap meter"));
+            let ft = meter * 3.2808;
+            alert(`ft = ${ft}`);
+        }
+        function bai3() {
+            let a = parseInt(prompt("nhap cạnh a"));
+            let acreage = a * a;
+            alert(`diện tích hình vuông là: ${acreage}`);
+        }
+
+        function bai4() {
+            let a = parseInt(prompt("nhap cạnh a"));
+            let b = parseInt(prompt("nhap cạnh b"));
+            let acreage = a * b;
+            alert(`diện tích hình chữ nhật là: ${acreage}`);
+        }
+
+        function bai5() {
+            let a = parseInt(prompt("nhap cạnh kề a"));
+            let b = parseInt(prompt("nhap cạnh kề b"));
+            let acreage = (1 / 2 * a) * b;
+            alert(`diện tích tam giác vuông là: ${acreage}`);
+        }
+
+        function bai6() {
+            let a = 4;
+            let b = 5;
+            if (a == 0 && b == 0) {
+                alert(`phương trình có vô số nghiệm`)
+            } else if (a == 0 && b != 0) {
+                alert(`phương trinh vô nghiệm`)
+            } else (
+                alert(`phương trình có nghiệm duy nhất ${-b / a}`)
+            )
+        }
+
+        function bai7() {
+            let a = 3;
+            let b = 4;
+            let c = 1;
+            let denta = ((b * b) - (4 * a * c));
+            if (denta > 0) {
+                alert(`phương trình có hai nghiệm: `);
+                let x1 = (-b + Math.sqrt(denta)) / (2 * a)
+                let x2 = (-b - Math.sqrt(denta)) / (2 * a)
+                document.write(x1 + '<br>' + x2)
+            } else if (denta == 0) {
+                alert(`phường trình có nghiệm kéo ${-b / (2 * a)}`)
+            } else {
+                alert("phương trình vô nghiệm")
+            }
+        }
+
+        function bai8() {
+            let age = parseInt(prompt("enter a number"));
+            if (age > 0 && age < 120) {
+                alert(`${age} là tuổi của một người`)
+            } else {
+                alert(`${age} không phải là tuổi của một người`)
+
+            }
+        }
+
+        function bai9() {
+            let a = parseFloat(prompt("enter a number"))
+            let b = parseFloat(prompt("enter a number"))
+            let c = parseFloat(prompt("enter a number"))
+            if (a, b, c > 0 && a + b > c && b + c > a && a + c > b) {
+                alert(`${a} ${b} ${c} là cạnh của một tam giác`)
+            } else {
+                alert(`${a} ${b} ${c} không phải là cạnh của một tam giác`)
+            }
+        }
+
+        function bai10() {
+            let e = parseInt(prompt("nhập vào sản lượng điện tiêu thụ (kWh) :"));
+            if (e > 0 && e <= 50) {
+                alert(`gía điện là ${e * 1678} đồng`)
+            } else if (e > 51 && e <= 100) {
+                alert(`gía điện là ${e * 1734} đồng`)
+            }
+            else if (e > 101 && e <= 200) {
+                alert(`gía điện là ${e * 2014} đồng`)
+            }
+            else if (e > 201 && e <= 300) {
+                alert(`gía điện là ${e * 2536} đồng`)
+            }
+            else if (e > 301 && e <= 400) {
+                alert(`gía điện là ${e * 2834} đồng`)
+            }
+            else if (e > 400) {
+                alert(`gía điện là ${e * 2927} đồng`)
+            } else {
+                alert(`đã có lỗi ! xin hãy nhập lại`)
+            }
+        }
+
+        function bai11() {
+            let thue = parseInt(prompt("nhập số tiền thu nhập hàng tháng"));
+            switch (true) {
+                case thue == 5:
+                    alert('thue suat la 5%');
+                    break;
+                case thue > 5 && thue == 10:
+                    alert('thue suat la 10%');
+                    break;
+                case (thue > 10 && thue == 18):
+                    alert('thue suat la 15%');
+                    break;
+                case (thue > 18 && thue == 32):
+                    alert('thue suat la 20%');
+                    break;
+                case (thue > 32 && thue == 52):
+                    alert('thue suat la 25%');
+                    break;
+                case thue > 52 && thue == 80:
+                    alert('thue suat la 30%');
+                    break;
+                case thue > 80:
+                    alert('thue suat la 35%');
+                    break;
+            }
+        }
+
+
+        function bai12() {
+            let money = 50;
+            let month = 6;
+            let interst = 1.5;
+            let money_interest = money * (interst / 360) * (month * 30);
+            alert(`số tiền lãi là: ${money_interest}`)
+        }
+    </script>
+</body>
+
+</html>

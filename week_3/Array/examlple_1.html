@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // let size = parseInt(prompt("nhập size"));
+        // for (let i = 0; i < size; i++) {
+        //     let index = parseInt(prompt("nhập vào index thứ "));
+        //     console.log(index)
+        // }
+
+        let size = 10;
+        let arr = [];
+        for (let i = 0; i < size; i++) {
+            arr[i] = Math.floor(Math.random() * (50 - 10 + 1) + 10);
+        }
+        console.log(arr);
+        //tính tổng mảng
+        let sum = 0;
+        for (let i = 0; i < arr.length; i++) {
+            sum += arr[i];
+        }
+        console.log(sum)
+
+        //tạo mảng mới từ start => end
+        let start = 2;
+        let end = 6;
+        let arra = new Array();
+        if (start >= 0 && end < arr.length) {
+            for (let i = start; i <= end; i++) {
+                arra[i] = arr[i]
+            }
+            console.log(arra)
+        }
+        //tìm vị trí mảng;
+        let num = parseInt(prompt("num"));
+        let n = -1;
+        for (let j = 0; j < arr.length; j++) {
+            if (num == arr[j]) {
+                n = j;
+                break;
+            }
+        }
+        console.log(n)
+
+
+
+    </script>
+</body>
+
+</html>

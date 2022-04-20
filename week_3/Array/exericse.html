@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //Bài 1: Bài tập mảng 1 chiều
+        //1.Tạo 1 mảng 1 chiều có kích cỡ size (được nhập từ bàn phím), các giá trị trong mảng được sinh ngẫu nhiên trong khoảng [5, 75];
+        let size = 10;
+        let arr = [];
+        for (let i = 0; i < size; i++) {
+            arr[i] = Math.floor(Math.random() * (75 - 5 + 1) + 5);
+        }
+        console.log(arr);
+        //2.Hiển thị mảng đó ra màn hình, mỗi phần tử cách nhau bởi dấu chấm phẩy (;). Ví dụ: 5;6;7;8..
+        let str = ""
+        for (let arr1 of arr) {
+            str += arr1 + ";";
+        } console.log(str)
+
+        //3.Trả về giá trị lớn nhất có trong mảng.
+        let locamax = 0;
+        let max = arr[0];
+        for (let i = 0; i < arr.length; i++) {
+            if (max < arr[i]) {
+                max = arr[i];
+            }
+            locamax = i;
+        }
+        console.log("gia trị lớn nhất trong mảng là: " + max + " ở vị trí: " + locamax);
+        //4.Trả về giá trị nhỏ nhất trong mảng.
+        let locamin = 0;
+        let min = arr[0];
+        for (let i = 0; i < arr.length; i++) {
+            if (min > arr[i]) {
+                min = arr[i];
+                locamin = i;
+            }
+        }
+        console.log("giá trị nhỏ nhất trong mảng là : " + min + " ở vị trí: " + locamin);
+
+        //5.Yêu cầu người dùng nhập và 1 giá trị, trả về TẤT CẢ các vị trí mà giá trị đó có trong mảng. Nếu giá trị đó không xuất hiện trong mảng thì trả về giá trị -1;
+        let num = parseInt(prompt("Enter a Number"));
+        let temp = -1;
+        for (let i = 0; i < arr.length; i++) {
+            if (num == arr[i]) {
+                temp = i;
+            }
+        }
+        console.log(`vị trí của số vừa nhập trong mảng là: ${temp}`)
+
+        //Bài 2: Kiểm tra số đối xứng bằng cách sử dụng kỹ thuật của mảng
+        // let ar = [1, 2, 2, 1]
+        // let tempt = arr;
+        // let rever = 0;
+        // let sur = 0;
+        // for (let n in arr) {
+        //     sur = tempt % 10;
+        //     tempt = Math.floor(tempt / 10);
+        //     rever = rever * 10 + sur;
+        // }
+        // console.log(`${arr} ${arr == rever ? 'là số đối xứng' : 'không là số đối xứng'} `)
+    </script>
+</body>
+
+</html>

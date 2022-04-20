@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>luyện tập 1</title>
+</head>
+<button onclick="bai1()">bài 1</button>
+<button onclick="bai2()">bài 2</button>
+<button onclick="bai3()">bài 3</button>
+<button onclick="bai4()">bài 4</button>
+<button onclick="bai5()">bài 5</button>
+<button onclick="bai6()">bài 6</button>
+<button onclick="bai7()">bài 7</button>
+
+<body>
+    <script>
+        function bai1() {
+            var a = parseInt(prompt("Enter a:"))
+            var b = parseInt(prompt("Enter b:"))
+            if (a % b == 0) {
+                alert(`a chia hết cho b`)
+            } else {
+                alert("a khong chia hết cho b")
+            }
+        }
+        function bai2() {
+            let age = parseInt(prompt("Enter age study: "));
+            if (age >= 15) {
+                alert(`học sinh đủ tuổi vào lớp 10`)
+            } else {
+                alert(`học sinh không đủ tuổi vào lớp 10`)
+            }
+        }
+        function bai3() {
+            let num = parseInt(prompt("nhập số nguyên:"));
+            if (num > 0) {
+                alert(`${num} lớn hơn không`)
+            } else {
+                alert(num + " bé hơn không")
+            }
+        }
+        function bai4() {
+            let a = parseInt(prompt("enter a number"));
+            let b = parseInt(prompt("enter a number"));
+            let c = parseInt(prompt("enter a number"));
+            if (a > b && a > c) {
+                alert("a lớn nhất")
+            } else if (b > c && b > a) {
+                alert(`${b} là số lớn nhất`)
+            }
+            else {
+                alert(`${c} là số lớn nhất`)
+            }
+        }
+
+        function bai5() {
+            let test = parseInt(prompt("enter a point"))
+            let midterm_exam = parseInt(prompt("enter a point"))
+            let final_exam = parseInt(prompt("enter a point"))
+            let total_score = (test + (midterm_exam * 2) + (final_exam * 3)) / 6;
+            alert(total_score)
+        }
+
+        function bai6() {
+            let turnover = parseInt(prompt("nhập doanh thu bán hàng"));
+            let ratio_rose = parseInt(prompt("nhập vào hoa hồng"));
+            let rose = (turnover * ratio_rose / 100)
+            alert(`hoa hồng nhận được là : ${rose}`)
+        }
+
+        function bai7() {
+            let munute = parseInt(prompt("số phút gọi"));
+            let gia_cuoc = parseInt(prompt("giá cước mỗi phút gọi"));
+            let billPhone = munute * gia_cuoc;
+            alert(`cước điện thoại là: ${billPhone}`)
+        }
+
+    </script>
+</body>
+
+</html>

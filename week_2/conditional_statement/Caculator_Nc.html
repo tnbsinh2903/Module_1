@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div>
+        <h1>Caculator</h1>
+    </div>
+    <table border="1" style="text-align:center;">
+        <tbody>
+            <tr>
+                <td colspan="4"><input type="text" name="textt" style="text-align: right;" id="screen"></td>
+
+            </tr>
+            <tr>
+                <td><button onclick="key_number(1)">1</button></td>
+                <td><button onclick="key_number(2)">2</button></td>
+                <td><button onclick="key_number(3)">3</button></td>
+                <td><button onclick="operetor('+')">+</button></td>
+            </tr>
+            <tr>
+                <td><button onclick="key_number(4)">4</button></td>
+                <td><button onclick="key_number(5)">5</button></td>
+                <td><button onclick="key_number(6)">6</button></td>
+                <td><button onclick="operetor('-')">-</button></td>
+            </tr>
+            <tr>
+                <td><button onclick="key_number(7)">7</button></td>
+                <td><button onclick="key_number(8)">8</button></td>
+                <td><button onclick="key_number(9)">9</button></td>
+                <td><button onclick="operetor('x')">x</button></td>
+            </tr>
+            <tr>
+                <td><button onclick="operetor('C')">C</button></td>
+                <td><button onclick="key_number(0)">0</button></td>
+                <td><button onclick="operetor('=')">=</button></td>
+                <td><button onclick="operetor('/')">/</button></td>
+            </tr>
+
+
+        </tbody>
+    </table>
+    <script>
+        var operet = false;
+        let input = document.querySelector("#screen");
+        function key_number(number) {
+            operet = false;
+            input.value += number;
+        }
+        function operetor(operand) {
+            switch (true) {
+                case operand == "C": {
+                    input.value = "";
+                    break;
+                }
+                case operand == "=" && input.value != "": {
+                    input.value = eval(input.value);
+                    break;
+
+                }
+                case !operet && input.value != "": {
+                    input.value += operand;
+                    operet = true;
+                    break;
+                }
+            }
+        }
+    </script>
+</body>
+
+</html>
