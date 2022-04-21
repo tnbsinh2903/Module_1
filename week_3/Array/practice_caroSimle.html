@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div>
+        <h1>Caro Game Simple</h1>
+        <p id="caro"></p>
+        <input type="button" value="Change" onclick="changvalue()">
+    </div>
+    <script>
+        let cr = document.getElementById("caro");
+        let bord = [];
+        let date = '';
+        for (let i = 0; i < 5; i++) {
+            bord[i] = new Array(0, 0, 0, 0, 0)
+        }
+        //console.log(bord)
+        for (let i = 0; i < 5; i++) {
+            date += "<br/>"
+            for (let j = 0; j < 5; j++) {
+                date += bord[i][j] + " &nbsp;&nbsp";
+            }
+        }
+        //date += '<br/ ><br/><input type="button" value="Change" onclick="changvalue()">'
+        cr.innerHTML = date;
+        function changvalue() {
+            let positionX = prompt("X: ");
+            let positionY = prompt("Y: ");
+            date = "";
+            bord[positionX][positionY] = "x";
+            for (let i = 0; i < 5; i++) {
+                date += "<br/>";
+                for (let j = 0; j < 5; j++) {
+                    date += bord[i][j] + " &nbsp;&nbsp";
+                }
+            }
+            //date += '<br/ ><br/><input type="button" value="Change" onclick="changvalue()">'
+
+            cr.innerHTML = "<hr/>" + date;
+
+        }
+    </script>
+</body>
+
+</html>
