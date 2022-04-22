@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form>
+        <input type="text" name="dictionary" id="diction">
+        <input type="button" value="Seach" onclick="seach()">
+    </form>
+    <script>
+        let english = ["Hello", "Morning", "Eat", "Sleep", "Run"];
+        let vietnamese = ["xin chào", "buổi sáng", "ăn", "ngủ", "chạy"];
+        function seach() {
+            let input = document.querySelector("#diction").value;
+            for (let i = 0; i < vietnamese.length; i++) {
+                if (input == vietnamese[i]) {
+                    alert(english[i])
+                } else {
+                    alert("Từ này không có trong từ điển")
+                }
+                break;
+            }
+        }
+    </script>
+</body>
+
+</html>

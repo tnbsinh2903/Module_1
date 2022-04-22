@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button onclick="bai1()">bài 1</button>
+    <button onclick="bai2()">bài 2</button>
+    <button onclick="bai3()">bài 3</button>
+    <script>
+        //Bai1. Chuyển đổi từ mảng sang chuỗi
+        function bai1() {
+            let myColor = ["Red", "Blue", "Black"];
+            document.write(myColor.toString() + "<br>");
+            document.write(myColor.join(";"))
+        }
+        //Bài.2.chương trình nhận một số nhập vào và chèn dấu (-) giữa 2  số chẵn;
+        function bai2() {
+            let num = parseInt(prompt("Enter a number"));
+            let str = num.toString();
+            let result = [str[0]];
+            for (let i = 0; i < str.length; i++) {
+                if (str[i - 1] % 2 === 0 && str[i] % 2 === 0) {
+                    result.push("-", str[i])
+                } else {
+                    result.push(str[i])
+                }
+            }
+            console.log(result.join(""))
+        }
+        //Bài.3.Chuyển chữ thường thành hoa và ngược lại;
+        function bai3() {
+            let str = prompt("nhập vào một chuỗi ");
+            let uper = "QƯERTYUIOPLKJHGFDSAZXCVBNM"
+            let lower = "qưertyuioplkjhgfdsazxcvbnm"
+            let result = [];
+            for (let i = 0; i < str.length; i++) {
+                if (uper.indexOf(str[i]) !== -1) {
+                    result.push(str[i].toLocaleLowerCase());
+                } else if (lower.indexOf(str[i] !== -1)) {
+                    result.push(str[i].toLocaleUpperCase());
+                } else {
+                    result.push(str[i]);
+                }
+
+            }
+            console.log(result.join(" "));
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loop Statements</title>
+</head>
+
+<body>
+    <script>
+
+        // let text;
+        // while (text != 0) {
+        //     document.write(text + '<br>')
+        //     text = parseInt(prompt("enter the text"))
+        // }
+        // let text;
+        // do {
+        //     text = prompt("enter a text");
+        //     document.write(text + '<br>')
+        // } while (text != 0)
+
+        ///=== saii
+        // let i
+        // for (; i != 0;) {
+        //     let i = prompt("in i")
+        //     console.log(i)
+        // }
+
+        /// đúng
+        // let i = prompt("in i")
+        // for (; i != 0;) {
+        //     console.log(i);
+        //     i = prompt("in i");
+        // }
+
+        //bảng cửu chương//
+
+        // for (let i = 2; i <= 9; i++) {
+        //     document.write('<tr>')
+        //     for (let j = 1; j <= 10; j++) {
+        //         document.write(`<td>${i} x ${j} = ${i * j} </td >`);
+        //     }
+        //     document.write('</tr>')
+        // }
+
+        // let i = 1;
+        // while (i < 9) {
+        //     i++;
+        //     document.write('<tr>')
+        //     let j = 1;
+        //     while (j <= 10) {
+        //         document.write(`<td>${i} x ${j} = ${i * j} </td >`);
+        //         j++;
+        //     }
+        //     document.write('</tr>')
+        // }
+
+        // let i = 1;
+        // do {
+        //     document.write('<tr>')
+        //     i++;
+        //     let j = 1;
+        //     do {
+        //         document.write(`<td>${i} x ${j} = ${i * j} </td >`);
+        //         j++
+        //     } while (j <= 10);
+        //     document.write('</tr>')
+        // } while (i < 9)
+
+        // for (let i = 2; i < 10; i++) {
+
+        //     document.write('<tr>')
+        //     let j = 1;
+        //     while (j <= 10) {
+        //         document.write(`<td>${i} x ${j} = ${i * j} </td >`);
+        //         j++
+        //     }
+        //     document.write('</tr>')
+        // }
+
+        for (let i = 1; i < 3;) {
+            document.write(`<ol>${i} .heading1`);
+            i++
+            for (let j = 0; j < 3; j++) {
+                document.write(`<ul> <li>${j} heading1.1</li></ul>`)
+            }
+            document.write('<ol>');
+        }
+    </script>
+</body>
+
+</html>
