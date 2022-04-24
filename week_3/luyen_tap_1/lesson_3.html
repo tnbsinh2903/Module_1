@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let arr = new Array(10);
+        for (let i = 0; i < arr.length; i++) {
+            arr[i] = Math.floor(Math.random() * (20 - 5 + 1) + 5)
+        }
+
+        let max = arr[0];
+        let sum = 0;
+        let lengtharr = arr.length;
+        for (let i = 0; i < lengtharr; i++) {
+            if (arr[i] > max) {
+                max = arr[i]
+            }
+            sum += arr[i]
+        }
+        let average = sum / lengtharr;
+        console.log(arr)
+        console.log(max);
+        console.log(average)
+    </script>
+</body>
+
+</html>
