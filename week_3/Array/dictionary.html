@@ -17,16 +17,19 @@
         let english = ["Hello", "Morning", "Eat", "Sleep", "Run"];
         let vietnamese = ["xin chào", "buổi sáng", "ăn", "ngủ", "chạy"];
         function seach() {
-            let input = document.querySelector("#diction").value;
+            let input = document.getElementById("diction").value;
             for (let i = 0; i < vietnamese.length; i++) {
-                if (input == vietnamese[i]) {
-                    alert(english[i])
+                if (input === vietnamese[i]) {
+                    alert(english[i]);
                 } else {
-                    alert("Từ này không có trong từ điển")
+                    alert("ko có trong từ điển")
                 }
                 break;
+
             }
         }
+
+
     </script>
 </body>
 
